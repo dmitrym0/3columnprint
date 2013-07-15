@@ -2,6 +2,7 @@
 
 use Data::Dumper;
 use POSIX;
+use strict;
 
 
 my $INPUT = <>;
@@ -16,8 +17,8 @@ my @spliced = partition_array($rows,@sortedArray);
 
 my @done = ();
 
-for ($row = 0; $row  < $rows; ++$row) {
-	for ($col = 0; $col < 3; ++$col) {
+for (my $row = 0; $row  < $rows; ++$row) {
+	for (my $col = 0; $col < 3; ++$col) {
 		my $value = $spliced[$col][$row];
 		print $value, " " if defined($value);
 	}
